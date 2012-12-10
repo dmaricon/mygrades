@@ -27,9 +27,13 @@
 <% end %>
 </table>
 
-<br />
+<br>
+Max Points: 
+<%= @total %>
 
+<br>
+<br>
 <%= link_to 'New Task', new_category_task_path(@category) %>
-<br />
-<br />
+<br>
+<br>
 <%= link_to 'Back to Course', course_categories_path(course) %>

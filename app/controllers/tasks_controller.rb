@@ -5,6 +5,10 @@ class TasksController < ApplicationController
   def index
     @tasks = @category.tasks.all
 		
+    @total = 0
+    @tasks.each { |task|
+      @total += task.total
+    }
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @tasks }
