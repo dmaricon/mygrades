@@ -21,13 +21,14 @@
 <% end %>
 </table>
 
+<% if @total != 100 then %>
+Caution: weights do not total 100%
+<br>
+Weight Total: <%= @total %>%
+<br>
+<% end %>
+
 <%= link_to 'New Category', new_course_category_path(@course) %>
 <br>
 <br>
-
-<% if @total != 100 then %>
-Caution: weights do not total 100%, 
-<br>
-<br>
-<% end %>
 <%= link_to 'Back to Courses', courses_path %>
