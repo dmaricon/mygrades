@@ -20,7 +20,6 @@
   </tr>
 <% end %>
 </table>
-<br>
 
 <%= link_to 'New Category', new_course_category_path(@course) %>
 <br>
@@ -28,5 +27,7 @@
 
 <% if @total != 100 then %>
 Caution: weights do not total 100%, 
+<br>
+<br>
 <% end %>
-<p>
+<%= link_to 'Back to Courses', courses_path %>
